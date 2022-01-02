@@ -9,7 +9,7 @@ namespace Game15.Controller
     public class GameController : MonoBehaviour
     {
         private GameModel game;
-        public GameView view;
+        [SerializeField] private GameView view;
 
         private void Start()
         {

@@ -10,7 +10,7 @@ namespace Game15.View
     {
         public int x;
         public int y;
-        public Text DigitText;
+        [SerializeField] private Text DigitText;
         private GameView gameView;
         public bool interactible = true;
 
