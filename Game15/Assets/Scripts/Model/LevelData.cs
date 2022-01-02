@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Custom/Game 15/Level Data", fileName = "New Level Data")]
 public class LevelData : ScriptableObject
 {
+    public string DescriptiveName;
     public Texture2D LevelImage;
     [Range(2, 12)] public int CellCountInRow = 4;
     [Range(0, 10)] public float CellSpacing = 4;

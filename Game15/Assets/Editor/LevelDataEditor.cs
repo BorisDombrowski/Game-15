@@ -12,6 +12,10 @@ namespace Game15.Model
         {
             serializedObject.Update();
 
+            //NAME FIELD
+            var nameField = serializedObject.FindProperty("DescriptiveName");
+            EditorGUILayout.PropertyField(nameField);
+
             //IMAGE FIELD
             var textureField = serializedObject.FindProperty("LevelImage");
             EditorGUILayout.PropertyField(textureField);

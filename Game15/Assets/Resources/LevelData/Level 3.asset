@@ -10,8 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fdabf064aa8c95a4cba508d657f918bd, type: 3}
-  m_Name: Level0
+  m_Name: Level 3
   m_EditorClassIdentifier: 
-  LevelImage: {fileID: 2800000, guid: 126ef23d0c6857c4c98b931819b1e8fc, type: 3}
+  DescriptiveName: Level 2
+  LevelImage: {fileID: 2800000, guid: cd4e348b6a6953c459e67dba4bd4f472, type: 3}
   CellCountInRow: 5
   CellSpacing: 5

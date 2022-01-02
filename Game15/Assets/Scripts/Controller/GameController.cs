@@ -9,16 +9,15 @@ namespace Game15.Controller
     public class GameController : MonoBehaviour
     {
         private GameModel game;
-        public LevelData lvlData;
         public GameView view;
 
         private void Start()
         {
-            game = new GameModel(lvlData);
+            game = new GameModel(GameManager.CurrentLevel);
             game.Start(1000 + DateTime.Now.DayOfYear);
 
             view.Initialize(this);
-            view.GenerateField(lvlData.LevelImage, game.size, game.cellSize, game.spacing);
+            view.GenerateField(GameManager.CurrentLevel.LevelImage, game.size, game.cellSize, game.spacing);
         }
 
         public void OnClick(int x, int y)

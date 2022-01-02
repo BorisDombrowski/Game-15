@@ -8,18 +8,25 @@ namespace Game15.View
 {
     public class GameView : MonoBehaviour
     {
-        public GridLayoutGroup GameLayout;
-        public GameButton ButtonPrefab;
+        [SerializeField] private GridLayoutGroup GameLayout;
+        [SerializeField] private GameButton ButtonPrefab;
         private List<GameButton> createdButtons = new List<GameButton>();
 
-        public RawImage Background;
-        public Toggle ShowDigitsToggle;
+        [SerializeField] private RawImage Background;
+        [SerializeField] private Toggle ShowDigitsToggle;
+        [SerializeField] private GameObject StartNextLevelButton;
+
 
         private GameController controller;
 
         public void Initialize(GameController controller)
         {
             this.controller = controller;
+
+            if(!GameManager.HasNextLevel())
+            {
+                StartNextLevelButton.SetActive(false);
+            }
         }
 
         public void GenerateField(Texture2D bgSprite,int fieldSize, float cellSize, float spacing)
